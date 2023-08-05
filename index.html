@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>whatsappLite</title>
-	<script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
-    <script defer src="js/client.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>chatSpace</title>
+	<script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+	<script defer src="js/client.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <nav>   
-		<img class="logo" src="logo.png" alt="Loading logo of chat">
-		<h1 class="start">Welcome to My whatsappLite: Online chating app</h1>
+	<nav>
+		<img class="logo" src="logo1.png" alt="Loading logo of chat">
+		<h1 class="start">Welcome to ChatSpace: Online Chating App</h1>
 	</nav>
 	<div class="container">
 		<!--
-		<div class="message right">Hello Bhai</div>
-		<div class="message left">Hello </div>
+		<div class="message right"></div>
+		<div class="message left"></div>
 		-->
 	</div>
 	<div class="send">
 		<form action="#" id="send-container">
 			<input type="text" name="messageInp" id="messageInp">
-			<button class="btn" type="submit">send</button>
+			<button class="btn" type="submit">Send</button>
 		</form>
 	</div>
 </body>
