@@ -1,69 +1,187 @@
-html, body {
+html,
+body {
+    background-image: url(bg.jpg);
+    background-position: top;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgb(255,255,255),#4fd6e8);
-  }
-  .logo{
-      display: block;
-      margin: auto;
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-  }
-  .start{
+    overflow: hidden;
+    background-size: cover;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.start {
     display: block;
     margin: auto;
     text-align: center;
     margin-bottom: 15px;
-  }
-  .container{
-      border: 2px solid black;
-      border-radius: 25% 10%;
-      max-width: 995px;
-      margin: auto;
-      background-color:#bee4a6;
-      height: 60vh;
-      padding: 20px;
-      overflow-y: auto;
-      margin-bottom: 10px;
-  }
-  #send-container{
-      display: block;
-      margin: auto;
-      text-align: center;
-      max-width: 990px;
-      width: 100%;
-  }
-  .message{
-      background-color:white;
-      width:22%;
-      padding: 12px;
-      margin: 17px 12px;
-      border: 2px solid black;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: larger;
-      font-style: italic;
-      border-radius: 10px 100px / 120px;
-  }
-  .left{
-      float: left;
-      clear: both;
-  }
-  .right{
-      float: right;
-      clear: both;
-  }
-  #messageInp{
-      width: 92%;
-      border:2px solid black;
-      border-radius: 25% 10%;
-      height: 34px;
-      font-size: larger;
-  }
-  .btn{
-      cursor: pointer;
-      border: 2px solid black;
-      border-radius:10px;
-      height: 34px;
-      font-size: larger;
-  }
+    color: #012e03;
+    font-size: xx-large;
+    background: linear-gradient(#d6dcea, #4cca5a);
+    margin-left: 18%;
+    margin-right: 18%;
+    border-radius: 10px;
+    border: 2px inset black;
+}
+
+.container {
+    border: 5px inset #2121d3;
+    border-radius: 50px;
+    max-width: 995px;
+    margin: auto;
+    background: linear-gradient(#d6dcea, #269aff);
+    height: 60vh;
+    padding: 20px;
+/*     overflow-y: auto; */
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Hide the scrollbar for modern browsers */
+    -ms-overflow-style: none; /* Hide the scrollbar for Internet Explorer and Edge */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for WebKit-based browsers (e.g., Chrome, Safari) */
+}
+
+#send-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 990px;
+    width: 100%;
+}
+
+.message {
+    background-color: white;
+    width: 25%;
+    padding: 12px;
+    margin: 17px 12px;
+    border: 4px inset black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-style: italic;
+    border-radius: 10px 20px / 12px;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.right {
+    float: right;
+    clear: both;
+}
+
+#messageInp {
+    width: 92%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 34px;
+    font-size: larger;
+    background: linear-gradient(#d6dcea, #4cca5a);
+    border: 2px solid black;
+}
+
+.btn {
+    cursor: pointer;
+    border: 2px inset blue;
+    border-radius: 10px;
+    height: 34px;
+    font-size: larger;
+}
+
+.btn:hover {
+    background-color: #269aff;
+    border: 3px inset #2121d3;
+    color: #e1f1ff;
+    transform: translateY(-0.1em);
+    cursor: pointer
+}
+
+.btn:active {
+    background-color: #269aff;
+    border: 4px inset #2121d3;
+    color: #e1f1ff;
+    transform: translateY(0.1em);
+    cursor: pointer
+}
+
+
+
+/* Adjust styles for smaller screens (phones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        height: 50vh; /* Adjust the height for smaller screens */
+        overflow-y: scroll; /* Enable vertical scrolling for messages */
+    }
+
+    .start {
+        font-size: x-large;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .message {
+        width: auto; /* Make the message box width adjustable to content */
+        max-width: 80%; /* Limit the maximum width of the message box */
+        word-wrap: break-word; /* Add word-wrap to ensure long messages wrap properly */
+    }
+
+    .left,
+    .right {
+        width: 100%; /* Ensure the message bubbles take full width on phones */
+        float: none; /* Reset the float on phones to stack messages vertically */
+        clear: both; /* Ensure the messages stack below each other */
+    }
+
+    .left {
+        text-align: left; /* Align left messages to the left side of the container */
+    }
+
+    .right {
+        text-align: right; /* Align right messages to the right side of the container */
+    }
+
+    #messageInp {
+        width: 70%; /* Adjust the input width for better display on phones */
+    }
+
+    .btn {
+        width: 25%; /* Adjust the button width for better display on phones */
+    }
+}
+
+/* Adjust styles for larger screens (laptops) */
+@media only screen and (min-width: 601px) {
+    .container {
+        max-width: 995px;
+        height: 60vh;
+    }
+
+    .start {
+        font-size: xx-large;
+        margin-left: 18%;
+        margin-right: 18%;
+    }
+
+    .message {
+        width: 25%;
+    }
+
+    #messageInp {
+        width: 92%;
+    }
+
+    .btn {
+        width: auto; /* Let the button width adjust automatically on laptops */
+    }
+}
